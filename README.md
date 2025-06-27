@@ -46,15 +46,6 @@ View previous calculations in the history
 
 Press Clear History to reset
 
-Roadmap
-Add SQLite history storage
-
-Add user accounts (future)
-
-Deploy to Heroku
-
-Add unit tests with GitHub Actions
-
 License
 This project is licensed under the MIT License.
 
