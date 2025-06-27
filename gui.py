@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter import ttk
 from adder import add_numbers, substract_numbers, multiply_numbers, divide_numbers
 
 def calculate():
@@ -24,23 +25,26 @@ def calculate():
         result_label.config(text="Enter valid numbers")
 
 root = tk.Tk()
-root.title("Simple GUI calculator")
+root.title("Prettier calculator")
 
-tk.Label(root, text='First number: ').grid(row = 0, column = 0)
-entry1 = tk.Entry(root)
+mainframe = ttk.Frame(root, padding="10 10 10 10")
+mainframe.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
+
+tk.Label(mainframe, text='First number: ').grid(row = 0, column = 0)
+entry1 = tk.Entry(mainframe)
 entry1.grid(row = 0, column = 1)
 
-tk.Label(root, text='Second number: ').grid(row = 1, column = 0)
-entry2 = tk.Entry(root)
+tk.Label(mainframe, text='Second number: ').grid(row = 1, column = 0)
+entry2 = tk.Entry(mainframe)
 entry2.grid(row = 1, column = 1)
 
-tk.Label(root, text='Operator (+, -, *, /):').grid(row = 2, column = 0)
-operator = tk.Entry(root)
+tk.Label(mainframe, text='Operator (+, -, *, /):').grid(row = 2, column = 0)
+operator = tk.Entry(mainframe)
 operator.grid(row = 2, column = 1)
 
-tk.Button(root, text="Calculate", command=calculate).grid(row = 3, column = 0, columnspan=2)
+tk.Button(mainframe, text="Calculate", command=calculate).grid(row = 3, column = 0, columnspan=2)
 
-result_label = tk.Label(root, text="Result:")
+result_label = tk.Label(mainframe, text="Result:")
 result_label.grid(row=4, column=0, columnspan=2)
 
 root.mainloop()

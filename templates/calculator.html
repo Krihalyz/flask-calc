@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+    <title>Flask Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Simple Web Calculator</h2>
+        <form method="post">
+            <input name="expression" type="text" placeholder="Type expression" required>
+            <button type="submit">Calculate</button>
+        </form>
+        <form method="post">
+            <button type="submit" name="clear">Clear History</button>
+        </form>
+        {% if result %}
+        <div class="result">Result: {{ result }}</div>
+        {% endif %}
+        <h3>History:</h3>
+        <ul>
+        {% for item in history %}
+            <li>{{ item }}</li>
+        {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
