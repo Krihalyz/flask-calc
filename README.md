@@ -54,14 +54,3 @@ Contributions welcome! Please open issues or submit pull requests on GitHub.
 
 
 ---
-
-**Steps to add this file:**
-
-1. Create a new file in your project root folder named `README.md`  
-2. Paste the content above inside it  
-3. Save the file  
-4. In your terminal, commit and push:
-
-git add README.md
-git commit -m "Add README file"
-git push
